@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Ivan Ponce</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Ivan Ponce">
+    <meta name="author" content="Ivan Ponce">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>WDD 131 - Dynamic Web Fundamentals - Ivan Ponce</h1>
+    <nav>
+        <ul>
+            <li><a href="https://www.linkedin.com/">My LinkedIn Profile</a></li>
+            <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=spa&id=p21#p21">Favorite Scripture</a></li>
+            <li><a href="#">Final Project Folder</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="card about-card">
+        <div class="banner">About Me</div>
+        <div class="about-container">
+            <p>My name is Ivan David Ponce, and I’m from Mexico. I really enjoy dancing and cooking. When I dance, I feel free and helps me relieve stress. Cooking lets me share meals with those I love, like my family and friends.</p>
+            <img src="images/Ivan.jpg" alt="Myself" class="about-image">
+        </div>
+        <h3>Mexico</h3> 
+        <p>Mexico is a beautiful country with a lot of culture and history. There are colorful festivals, friendly people, and amazing food. I love our dishes like tacos and mole. Celebrations like Día de los Muertos are special because they bring everyone together to remember and honor loved ones. Being from Mexico makes me proud!</p>
+        <img src="images/Mexico_Flag.png" alt="My Country" class="country-image">
+    </section>
+
+    <section class="card resources-card">
+        <div class="banner">Web Dev Resources</div>
+        <ul class="resources-list">
+            <li><a href="#">Resource Link 1</a></li>
+            <li><a href="#">Resource Link 2</a></li>
+            <li><a href="#">Resource Link 3</a></li>
+        </ul>
+    </section>
+</main>
+
+
+
+<footer>
+    <p>
+        &copy; <span id="currentyear"></span> Ivan Ponce, Queretaro, MX.
+    </p>
+    <p id="lastModified"></p>
+</footer>
+
+<script>
+    // Populate the current year
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+    // Populate the last modified date
+    document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
+</script>
+
+</body>
+</html>
