@@ -29,7 +29,16 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none; 
+    color: #000000; 
+    font-weight: bold; 
+    padding: 0.5rem 1rem; 
+    border-radius: 5px; 
+    background-color: transparent; 
+    display: inline-block; 
+    color: white; 
+    background-color: #a9d6b4; 
+    transform: scale(1.1); 
 }
 
 main {
@@ -82,6 +91,27 @@ main {
     flex-direction: column; 
     gap: 0.5rem; 
     align-items: center; 
+}
+
+.resources-list li {
+    transition: transform 0.3s, color 0.3s; 
+}
+
+.resources-list a {
+    text-decoration: none; 
+    color: #000000; 
+    font-weight: bold; 
+    padding: 0.5rem 1rem; 
+    border-radius: 5px; 
+    background-color: transparent; 
+    display: inline-block; 
+}
+
+
+.resources-list a:hover {
+    color: white; 
+    background-color: #275f35; 
+    transform: scale(1.1);
 }
 
 footer {
