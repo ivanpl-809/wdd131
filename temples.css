@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: 'Monserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    display: none; /* Hide nav initially for mobile */
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul.visible {
+    display: flex; /* Show the menu when visible */
+}
+
+nav ul li {
+    width: 100%; /* Make sure list items take full width */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    text-align: center;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Hamburger Menu Button */
+button {
+    display: block;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 10px;
+    position:relative;
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        display: none;
+    }
+}
+
+/* Main Section */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.temple-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}

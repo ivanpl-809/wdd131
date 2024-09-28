@@ -1,0 +1,14 @@
+/* Larger Screen Styles */
+main {
+    max-width: 1000px;
+}
+
+.temple-gallery {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+nav ul {
+    justify-content: space-between;
+}
+
+/* You can add more custom large-screen styling here */
