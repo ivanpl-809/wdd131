@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: var(--primary-color);
     background-color: #F0F0F0;
     margin: 0;
@@ -55,8 +55,6 @@ header {
     color: var(--secondary-color);
 }
 
-
-/* Footer Styles */
 footer {
     text-align: center;
     padding: 10px;
@@ -64,38 +62,36 @@ footer {
     color: white;
 }
 
-/* Mobile (default) Styles: data and weather appear as a list */
 @media (max-width: 767px) {
     .data, .weather {
         width: 90%;
         margin: 20px auto;
-        position: static; /* Default positioning for small screens */
+        position: static; 
     }
 }
 
-/* Wide Screens (Desktop and Tablets) */
 @media (min-width: 768px) {
     .hero {
-        position: relative; /* Hero section remains relative */
+        position: relative; 
     }
 
     .data, .weather {
-        position: absolute; /* Positioning absolute over the hero image */
+        position: absolute; 
         width: 30%;
         padding: 20px;
-        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        background-color: rgba(255, 255, 255, 0.8); 
         border: 1px solid #ccc;
-        z-index: 2; /* Ensure it's above the image */
+        z-index: 2; 
         text-align: justify;
     }
 
     .data {
         top: 20%;
-        right: 10%; /* Position on the left of the image */
+        right: 10%; 
     }
 
     .weather {
         top: 90%;
-        right: 10%; /* Position on the right of the image */
+        right: 10%; 
     }
 }
