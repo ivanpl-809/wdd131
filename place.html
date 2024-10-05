@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Mexico</title>
+    <link rel="stylesheet" href="place.css">
+    <script src="place.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Discover the Beauty of Mexico</h1>
+        <picture>
+            <source media="(min-width: 768px)" srcset="images\pin-travel-mexico-riviera-maya-cabalgata-large.WebP">
+            <source media="(max-width: 767px)" srcset="images\pin-travel-mexico-riviera-maya-cabalgata-medium.WebP">
+            <img src="images\pin-travel-mexico-riviera-maya-cabalgata-small.WebP" alt="Alebrije, traditional mexican folklore creature" class="hero">
+        </picture>
+    </header>
+
+    <section class="data">
+        <h2>Data</h2>
+        <ul>
+            <li>Area: <span>1,964,375 sq km</span></li>
+            <li>Population: <span>126,014,024</span></li>
+            <li>Capital: <span>Mexico City</span></li>
+            <li>Main language: <span>Spanish</span></li>
+            <li>Currency: <span>Mexican Peso (MXN)</span></li>
+            <li>Time Zone: <span>UTC-6 (CST)</span></li>
+            <li>Calling Code: <span>+52</span></li>
+            <li>Internet TLD: <span>mx</span></li>
+        </ul>
+    </section>
+
+
+    <section class="weather">
+        <h2>Weather</h2>
+        <img src="images\7795628_weather_day_cloud_cloudy_sky_icon.svg" width="100" height="100" alt="Weather Icon" class="weather-icon"> 
+        <ul>
+            <li>Temperature: <span id="temp">Loading...</span>°C</li>
+            <li>Wind Speed: <span id="windSpeed">Loading...</span> km/h</li>
+            <li>Windchill: <span id="windChill">Loading...</span></li>
+        </ul>
+    </section>
+    
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Ivan Ponce | Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
