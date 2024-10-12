@@ -3,6 +3,13 @@
     --secondary-color: #CE1126; 
 }
 
+.m-plus-2-<uniquifier> {
+    font-family: "M PLUS 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
 body {
     font-family: "M PLUS 2", sans-serif;
     color: var(--primary-color);
