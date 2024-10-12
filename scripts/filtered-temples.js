@@ -1,20 +1,19 @@
-// Update year and last modified date
 const yearSpan = document.getElementById("currentyear");
 const lastModifiedSpan = document.getElementById("lastModified");
 
 yearSpan.textContent = new Date().getFullYear();
 lastModifiedSpan.textContent = document.lastModified;
 
-// Hamburger Menu Functionality
+
 const nav = document.querySelector("nav ul");
 const header = document.querySelector("header");
 const hamburger = document.createElement("button");
-hamburger.textContent = "☰"; // Menu Icon
-header.appendChild(hamburger); // Append to header, not before anything
+hamburger.textContent = "☰"; 
+header.appendChild(hamburger); 
 
 hamburger.addEventListener("click", () => {
     nav.classList.toggle("visible");
-    hamburger.textContent = nav.classList.contains("visible") ? "✖" : "☰"; // Switch between menu and close icon
+    hamburger.textContent = nav.classList.contains("visible") ? "✖" : "☰"; 
 });
 
 const temples = [
@@ -74,13 +73,12 @@ const temples = [
         image:
         "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
       },
-    // Add at least three more temple objects here
+    
   ];
   
-  // Function to generate temple cards
 function displayTemples(templesToDisplay) {
     const gallery = document.querySelector(".temple-gallery");
-    gallery.innerHTML = ""; // Clear current content
+    gallery.innerHTML = ""; 
   
     templesToDisplay.forEach((temple) => {
       const templeCard = `
@@ -96,8 +94,6 @@ function displayTemples(templesToDisplay) {
       gallery.innerHTML += templeCard;
     });
   }
-  
-  // Initial display of all temples
   displayTemples(temples);
 
   document.querySelector("nav").addEventListener("click", (event) => {
@@ -121,7 +117,7 @@ function displayTemples(templesToDisplay) {
           filteredTemples = temples.filter((temple) => temple.area < 10000);
           break;
         default:
-          filteredTemples = temples; // Home or anything else shows all
+          filteredTemples = temples; 
           break;
       }
   
