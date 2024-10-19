@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box; /* Includes padding and border in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ededed; /* Light background color */
+}
+
+header {
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #215038;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    max-width: 600px; /* Max width for form */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: auto;
+    margin-bottom: 10px; /* Add more space below the header */
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    background: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Max width for form */
+    margin: auto; /* Centering the form */
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 15px;
+    font-weight: bold; /* Bold labels */
+    color: #556857; /* Darker color for text */
+}
+
+textarea {
+    max-width: 100%; /* Prevents exceeding the container */
+    resize: vertical; /* Allows resizing only vertically */
+    overflow: auto; /* Adds scrollbars if the content exceeds the visible area */
+    padding: 10px; /* Consistent padding */
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px; /* Increased padding for better click area */
+    margin-bottom: 15px; /* Spacing below inputs */
+    border: 2px solid #ccc; /* Border with more visibility */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #215038; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Overall rating section */
+.overall-rating {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 15px; /* Space below the overall rating section */
+
+}
+
+.rating > input {
+    display: none; /* Hide the actual radio buttons */
+}
+
+.rating > label {
+    font-size: 30px; /* Size for the stars */
+    color: #666; /* Color for unselected stars */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: 10px; /* Space between stars */
+}
+
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+}
+
+.rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #666;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+    color: #ffa723;
+}
+
+input[type="submit"] {
+    background-color: #215038; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Larger text for button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+input[type="submit"]:hover {
+    background-color: #011d0f; /* Darker blue on hover */
+}
+
+fieldset {
+    border: none; /* Remove default fieldset border */
+    margin: 10px 0; /* Margin around fieldset */
+    padding: 0; /* Remove padding */
+}
+
+legend {
+    font-weight: bold; /* Bold legend text */
+    margin-bottom: 10px; /* Spacing below legend */
+}
+
+.checkbox-wrapper-46 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.checkbox-wrapper-46 .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098a9;
+    transition: all 0.2s ease;
+}
+
+.checkbox-wrapper-46 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #104610;
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.checkbox-wrapper-46 .cbx span:last-child {
+    padding-left: 8px;
+}
+
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+    border-color: #215038;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+    background: #215038;
+    border-color: #215038;
+    animation: wave-46 0.4s ease;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.checkbox-container {
+    display: flex; /* Enable flexbox layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 15px; /* Space between items */
+    margin-bottom: 20px; /* Space below the checkbox container */
+}
+
+.checkbox-wrapper-46 {
+    flex: 1 1 calc(50% - 15px); /* Take half the width minus gap */
+    min-width: 200px; /* Ensure a minimum width */
+}
+
+footer {
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #215038;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    max-width: 600px; /* Max width for form */
+    margin: auto; /* Centering the form */
+}
+
+@keyframes wave-46 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    form {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+}
