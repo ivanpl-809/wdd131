@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Product Form">
+    <meta name="author" content="Ivan Ponce">
     <link rel="stylesheet" href="css/form.css">
     <title>Review Confirmation</title>
 </head>
@@ -12,7 +14,6 @@
     <p>Total Reviews Submitted: <span id="reviewCount">0</span></p>
 
     <script>
-        // Function to update review count
         function updateReviewCount() {
             let count = localStorage.getItem('reviewCount') || 0;
             count++;

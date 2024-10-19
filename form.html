@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Product Form">
+    <meta name="author" content="Ivan Ponce">
     <link rel="stylesheet" href="styles/form.css">
     <title>Product Review</title>
     <script src="scripts/form.js" defer></script> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -29,7 +35,7 @@
             <input value="2" name="rate" id="star2" type="radio">
             <label title="text" for="star2"></label>
             <input value="1" name="rate" id="star1" type="radio">
-            <label title="text" for="star"></label>
+            <label title="text" for="star1"></label>
           </div>
         </div>
 
@@ -37,7 +43,7 @@
         <input type="date" id="installationDate" name="installationDate" required>
 
         <fieldset>
-            <label for="usefullInfo">Any Issues with your product?:</label>
+            <label>Any Issues with your product?:</label>
             <div class="checkbox-container">
                 <div class="checkbox-wrapper-46">
                     <input type="checkbox" id="cbx-1" class="inp-cbx" />
@@ -96,7 +102,7 @@
         <label for="userName">User Name:</label>
         <input type="text" id="userName" name="userName">
 
-        <input type="submit" value="Submit Review">
+        <input type="submit" value="Submit">
     </form>
 
     <footer>

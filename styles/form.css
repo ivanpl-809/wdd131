@@ -1,12 +1,12 @@
 * {
-    box-sizing: border-box; /* Includes padding and border in element's total width and height */
+    box-sizing: border-box; 
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; 
     margin: 0;
     padding: 20px;
-    background-color: #ededed; /* Light background color */
+    background-color: #ededed; 
 }
 
 header {
@@ -16,10 +16,10 @@ header {
     color: white;
     padding: 30px;
     text-align: center;
-    max-width: 600px; /* Max width for form */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
     margin: auto;
-    margin-bottom: 10px; /* Add more space below the header */
+    margin-bottom: 10px; 
 }
 
 h1 {
@@ -29,27 +29,27 @@ h1 {
 }
 
 form {
-    background: #ffffff; /* White background for the form */
+    background: #ffffff; 
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-width: 600px; /* Max width for form */
-    margin: auto; /* Centering the form */
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    margin: auto; 
     margin-bottom: 10px;
 }
 
 label {
     display: block;
     margin: 10px 0 15px;
-    font-weight: bold; /* Bold labels */
-    color: #556857; /* Darker color for text */
+    font-weight: bold; 
+    color: #556857; 
 }
 
 textarea {
-    max-width: 100%; /* Prevents exceeding the container */
-    resize: vertical; /* Allows resizing only vertically */
-    overflow: auto; /* Adds scrollbars if the content exceeds the visible area */
-    padding: 10px; /* Consistent padding */
+    max-width: 100%; 
+    resize: vertical; 
+    overflow: auto; 
+    padding: 10px; 
 }
 
 input[type="text"],
@@ -57,19 +57,19 @@ input[type="date"],
 textarea,
 select {
     width: 100%;
-    padding: 10px; /* Increased padding for better click area */
-    margin-bottom: 15px; /* Spacing below inputs */
-    border: 2px solid #ccc; /* Border with more visibility */
-    border-radius: 4px; /* Rounded corners */
-    transition: border-color 0.3s; /* Smooth transition */
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 2px solid #ccc; 
+    border-radius: 4px; 
+    transition: border-color 0.3s; 
 }
 
 input[type="text"]:focus,
 input[type="date"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #215038; /* Highlight border on focus */
-    outline: none; /* Remove default outline */
+    border-color: #215038; 
+    outline: none; 
 }
 
 input[type="radio"],
@@ -77,23 +77,22 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 
-/* Overall rating section */
 .overall-rating {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 15px; /* Space below the overall rating section */
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 15px; 
 
 }
 
 .rating > input {
-    display: none; /* Hide the actual radio buttons */
+    display: none; 
 }
 
 .rating > label {
-    font-size: 30px; /* Size for the stars */
-    color: #666; /* Color for unselected stars */
-    cursor: pointer; /* Change cursor to pointer */
-    margin-left: 10px; /* Space between stars */
+    font-size: 30px; 
+    color: #666; 
+    cursor: pointer; 
+    margin-left: 10px; 
 }
 
 .rating:not(:checked) > input {
@@ -130,29 +129,29 @@ input[type="checkbox"] {
 }
 
 input[type="submit"] {
-    background-color: #215038; /* Button color */
+    background-color: #215038;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 16px; /* Larger text for button */
-    transition: background-color 0.3s; /* Smooth transition */
+    font-size: 16px; 
+    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #011d0f; /* Darker blue on hover */
+    background-color: #011d0f; 
 }
 
 fieldset {
-    border: none; /* Remove default fieldset border */
-    margin: 10px 0; /* Margin around fieldset */
-    padding: 0; /* Remove padding */
+    border: none; 
+    margin: 10px 0; 
+    padding: 0; 
 }
 
 legend {
-    font-weight: bold; /* Bold legend text */
-    margin-bottom: 10px; /* Spacing below legend */
+    font-weight: bold; 
+    margin-bottom: 10px; 
 }
 
 .checkbox-wrapper-46 input[type="checkbox"] {
@@ -236,15 +235,15 @@ legend {
 }
 
 .checkbox-container {
-    display: flex; /* Enable flexbox layout */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 15px; /* Space between items */
-    margin-bottom: 20px; /* Space below the checkbox container */
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-bottom: 20px; 
 }
 
 .checkbox-wrapper-46 {
-    flex: 1 1 calc(50% - 15px); /* Take half the width minus gap */
-    min-width: 200px; /* Ensure a minimum width */
+    flex: 1 1 calc(50% - 15px); 
+    min-width: 200px; 
 }
 
 footer {
@@ -255,8 +254,8 @@ footer {
     text-align: center;
     padding: 10px;
     position: relative;
-    max-width: 600px; /* Max width for form */
-    margin: auto; /* Centering the form */
+    max-width: 600px; 
+    margin: auto; 
 }
 
 @keyframes wave-46 {
@@ -267,10 +266,10 @@ footer {
 
 @media (max-width: 600px) {
     body {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px; 
     }
 
     form {
-        padding: 15px; /* Less padding on smaller screens */
+        padding: 15px; 
     }
 }

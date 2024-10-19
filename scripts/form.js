@@ -10,8 +10,8 @@ const productSelect = document.getElementById('productName');
 
 products.forEach(product => {
     const option = document.createElement('option');
-    option.value = product.id; // Set the product id as the value
-    option.textContent = product.name; // Set the display name
+    option.value = product.id; 
+    option.textContent = product.name; 
     productSelect.appendChild(option);
 });
 
