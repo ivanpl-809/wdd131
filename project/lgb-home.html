@@ -3,41 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Poject - Ivan Ponce</title>
+    <meta name="description" content="WDD 131 - Final Project - Music Website">
+    <meta name="author" content="Ivan Ponce">
     <link rel="stylesheet" href="lgb.css">
-    <title>Music Player</title>
+    <title>Lavender GlowBeats</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Online Radio</h1>
+    <header class="header">
+        <div class="logo">Logo</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#link1">Link 1</a></li>
+                <li><a href="#link2">Link 2</a></li>
+                <li><a href="#link3">Link 3</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
+    <aside class="side-menu" id="sideMenu">
+        <div class="close-btn" onclick="toggleMenu()">✖</div>
+        <ul>
+            <li><a href="#link1">Link 1</a></li>
+            <li><a href="#link2">Link 2</a></li>
+            <li><a href="#link3">Link 3</a></li>
+        </ul>
+    </aside>
+
+    <div class="carousel-container">
         <div class="carousel">
-            <div class="track-card active">
-                <h2>Track Title 1</h2>
-                <p>Track description 1</p>
-            </div>
-            <div class="track-card">
-                <h2>Track Title 2</h2>
-                <p>Track description 2</p>
-            </div>
-            <div class="track-card">
-                <h2>Track Title 3</h2>
-                <p>Track description 3</p>
-            </div>
-            <div class="track-card">
-                <h2>Track Title 4</h2>
-                <p>Track description 4</p>
-            </div>
-            <div class="track-card">
-                <h2>Track Title 5</h2>
-                <p>Track description 5</p>
-            </div>
+            <!-- Track cards will be inserted here -->
+            <div class="track-card"><h2>Track Title 1</h2><p>Track Description 1</p></div>
+            <div class="track-card"><h2>Track Title 2</h2><p>Track Description 2</p></div>
+            <div class="track-card"><h2>Track Title 3</h2><p>Track Description 3</p></div>
+            <div class="track-card"><h2>Track Title 4</h2><p>Track Description 4</p></div>
         </div>
-        <div class="player-controls">
-            <button class="prev">⏮</button>
-            <button class="play-pause">▶</button>
-            <button class="next">⏭</button>
-        </div>
-        <input type="range" class="progress" value="0" max="100" />
     </div>
+    
+    <div class="controls-container">
+        <div class="controls">
+            <button class="prev">◀</button>
+            <button class="play-pause">▶</button>
+            <button class="next">▶</button>
+        </div>
+        <div class="progress-container">
+            <span class="progress-time">0:00</span>
+            <progress class="progress" value="0" max="100"></progress>
+        </div>        
+    </div>
+
     <script src="lgb.js"></script>
 </body>
 </html>
