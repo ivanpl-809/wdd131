@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Poject - Ivan Ponce</title>
-    <meta name="description" content="WDD 131 - Final Project - Music Website">
+    <meta name="description" content="WDD 131 - Final Project - Merch Store">
     <meta name="author" content="Ivan Ponce">
-    <link rel="stylesheet" href="lgb.css">
-    <title>Lavender GlowBeats</title>
+    <link rel="stylesheet" href="merch.css">
+    <title>Lavender GlowBeats - Store</title>
 </head>
 <body>
     <header class="header">
         <div class="logo-container">
             <h1 class="logo-title">Lavender GlowBeats</h1>
             <p class="logo-subtitle">Vibes to Unwind</p>
+
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="lgb-home.html">Online Radio</a></li>
+                <li><a href="lgb-home.html">Radio</a></li>
                 <li><a href="lgb-about.html">About Us</a></li>
                 <li><a href="lgb-merch.html">Merch</a></li>
             </ul>
@@ -33,30 +34,37 @@
         </ul>
     </aside>
 
-
-    <div class="carousel-container">
-        <div class="carousel">
-            <!-- Track cards will be inserted here -->
-            <div class="track-card"><h2>Track Title 1</h2><p>Track Description 1</p></div>
-            <div class="track-card"><h2>Track Title 2</h2><p>Track Description 2</p></div>
-            <div class="track-card"><h2>Track Title 3</h2><p>Track Description 3</p></div>
-            <div class="track-card"><h2>Track Title 4</h2><p>Track Description 4</p></div>
+    <div class="store-container">
+        <!-- Store item 1 -->
+        <div class="store-item">
+          <p><a target="_blank" href="https://www.etsy.com/"><img src="images/shirt.png" alt="Lavender GlowBeats T-Shirt">
+          </a></p>
+          <div class="item-info">
+            <h2>Lavender GlowBeats T-Shirt</h2>
+            <p>$25.00</p>
+          </div>
         </div>
-    </div>
     
-    <div class="controls-container">
-        <div class="controls">
-            <button class="prev">◀</button>
-            <button class="play-pause">▶</button>
-            <button class="next">▶</button>
+        <!-- Store item 2 -->
+        <div class="store-item">
+          <p><a target="_blank" href="https://www.etsy.com/"><img src="images/hat.png" alt="Lavender GlowBeats Hat"></a></p>
+          <div class="item-info">
+            <h2>Lavender GlowBeats Hat</h2>
+            <p>$18.00</p>
+          </div>
         </div>
-        <div class="progress-container">
-            <span class="progress-time">0:00</span>
-            <progress class="progress" value="0" max="100"></progress>
-        </div>        
-    </div>
+    
+        <!-- Store item 3 -->
+        <div class="store-item">
+          <p><a target="_blank" href="https://www.etsy.com/"><img src="images/mug.png" alt="Lavender GlowBeats Mug"></a></p>
+          <div class="item-info">
+            <h2>Lavender GlowBeats Mug</h2>
+            <p>$12.00</p>
+          </div>
+        </div>
+      </div>
 
-    <footer>
+      <footer>
         <div class="footer">
           <div class="row social-links">
             <a href="https://github.com/ivanpl-809" target="_blank" aria-label="GitHub">
@@ -86,6 +94,6 @@
         </div>
     </footer>
     
-    <script src="lgb.js"></script>
+    <script src="merch.js"></script>
 </body>
 </html>

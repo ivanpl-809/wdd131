@@ -1,7 +1,3 @@
-function toggleMenu() {
-    const sideMenu = document.getElementById('sideMenu');
-    sideMenu.classList.toggle('active');
-}
 // Track data
 const tracks = [
     {
@@ -64,14 +60,26 @@ const updateProgress = () => {
     document.querySelector('.progress-time').textContent = formatTime(audio.currentTime); // Update displayed time
 };
 
+// Function to play the current track and update display
+const playTrack = () => {
+    audio.src = tracks[currentTrackIndex].file; // Set the audio source
+    audio.play(); // Play the audio
+    updateTrackDisplay(); // Update track display
+    playPauseButton.textContent = '||'; // Set to pause icon
+};
+
+// Event listener for audio end to play the next track automatically
+audio.addEventListener('ended', () => {
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length; // Move to next track
+    playTrack(); // Play the next track
+});
 
 // Event listener for play/pause button
 playPauseButton.addEventListener('click', () => {
     if (audio.paused) {
-        audio.play();
-        playPauseButton.textContent = '||'; // Change to pause icon
+        playTrack(); // Call playTrack to play the audio
     } else {
-        audio.pause();
+        audio.pause(); // Pause the audio
         playPauseButton.textContent = '▶'; // Change to play icon
     }
 });
@@ -79,25 +87,18 @@ playPauseButton.addEventListener('click', () => {
 // Event listener for next button
 nextButton.addEventListener('click', () => {
     currentTrackIndex = (currentTrackIndex + 1) % tracks.length; // Move to next track
-    audio.src = tracks[currentTrackIndex].file; // Update audio source
-    audio.play(); // Play new track
-    updateTrackDisplay(); // Update track display
-    playPauseButton.textContent = '||'; // Set to pause icon
+    playTrack(); // Play new track
 });
 
 // Event listener for previous button
 prevButton.addEventListener('click', () => {
     currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length; // Move to previous track
-    audio.src = tracks[currentTrackIndex].file; // Update audio source
-    audio.play(); // Play new track
-    updateTrackDisplay(); // Update track display
-    playPauseButton.textContent = '||'; // Set to pause icon
+    playTrack(); // Play new track
 });
 
 // Event listener for audio time update to update progress bar
 audio.addEventListener('timeupdate', updateProgress);
 
-// Event listener for progress bar change to seek track
 // Event listener for progress bar change to seek track
 progressBar.addEventListener('input', () => {
     const seekTime = (progressBar.value / 100) * audio.duration; // Calculate seek time
@@ -114,6 +115,20 @@ progressBar.addEventListener('click', (event) => {
     audio.currentTime = newTime; // Update the current time of audio
 });
 
+// Function to toggle menu
+function toggleMenu() {
+    const sideMenu = document.getElementById('sideMenu');
+    sideMenu.classList.toggle('active');
+}
 
-// Initialize track display on page load
-updateTrackDisplay(); // Show the initial track
+// Display current year and last modified date
+const yearSpan = document.getElementById("currentyear");
+const lastModifiedSpan = document.getElementById("lastModified");
+
+yearSpan.textContent = new Date().getFullYear();
+lastModifiedSpan.textContent = document.lastModified;
+
+// Automatically play the first track on page load
+window.onload = () => {
+    playTrack(); // Play the first track when the page loads
+};
