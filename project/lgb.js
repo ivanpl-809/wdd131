@@ -21,113 +21,100 @@ const tracks = [
     },
 ];
 
-let currentTrackIndex = 0; // Track index
-const audio = new Audio(tracks[currentTrackIndex].file); // Create audio object
-const playPauseButton = document.querySelector('.play-pause'); // Play/Pause button
-const nextButton = document.querySelector('.next'); // Next button
-const prevButton = document.querySelector('.prev'); // Previous button
-const progressBar = document.querySelector('.progress'); // Progress bar
-const trackCards = document.querySelectorAll('.track-card'); // Track cards
-const carousel = document.querySelector('.carousel'); // Carousel container
+let currentTrackIndex = 0; 
+const audio = new Audio(tracks[currentTrackIndex].file); 
+const playPauseButton = document.querySelector('.play-pause'); 
+const nextButton = document.querySelector('.next'); 
+const prevButton = document.querySelector('.prev'); 
+const progressBar = document.querySelector('.progress'); 
+const trackCards = document.querySelectorAll('.track-card'); 
+const carousel = document.querySelector('.carousel'); 
 
-// Function to update the active track card
+
 const updateTrackDisplay = () => {
     trackCards.forEach((card, index) => {
-        card.classList.remove('active'); // Remove active class
+        card.classList.remove('active'); 
         if (index === currentTrackIndex) {
-            card.classList.add('active'); // Add active class to current track
-            card.querySelector('h2').textContent = tracks[currentTrackIndex].title; // Update title
-            card.querySelector('p').textContent = tracks[currentTrackIndex].description; // Update description
+            card.classList.add('active'); 
+            card.querySelector('h2').textContent = tracks[currentTrackIndex].title;
+            card.querySelector('p').textContent = tracks[currentTrackIndex].description; 
         }
     });
 
-    // Move the carousel to show the active card
-    const offset = -currentTrackIndex * 100; // Calculate offset for sliding effect
-    carousel.style.transform = `translateX(${offset}%)`; // Move carousel
+    const offset = -currentTrackIndex * 100; 
+    carousel.style.transform = `translateX(${offset}%)`; 
 };
 
 const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
-    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`; // Format with leading zero for seconds
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`; 
 };
 
-// Function to update progress bar and time display
 const updateProgress = () => {
-    const progress = (audio.currentTime / audio.duration) * 100; // Calculate progress percentage
-    progressBar.value = progress; // Update progress bar value
-    document.querySelector('.progress-time').textContent = formatTime(audio.currentTime); // Update displayed time
+    const progress = (audio.currentTime / audio.duration) * 100; 
+    progressBar.value = progress; 
+    document.querySelector('.progress-time').textContent = formatTime(audio.currentTime); 
 };
 
-// Function to play the current track and update display
 const playTrack = () => {
-    audio.src = tracks[currentTrackIndex].file; // Set the audio source
-    audio.play(); // Play the audio
-    updateTrackDisplay(); // Update track display
-    playPauseButton.textContent = '||'; // Set to pause icon
+    audio.src = tracks[currentTrackIndex].file; 
+    audio.play(); 
+    updateTrackDisplay(); 
+    playPauseButton.textContent = '||'; 
 };
 
-// Event listener for audio end to play the next track automatically
 audio.addEventListener('ended', () => {
-    currentTrackIndex = (currentTrackIndex + 1) % tracks.length; // Move to next track
-    playTrack(); // Play the next track
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length; 
+    playTrack(); 
 });
 
-// Event listener for play/pause button
 playPauseButton.addEventListener('click', () => {
     if (audio.paused) {
-        playTrack(); // Call playTrack to play the audio
+        playTrack(); 
     } else {
-        audio.pause(); // Pause the audio
-        playPauseButton.textContent = '▶'; // Change to play icon
+        audio.pause(); 
+        playPauseButton.textContent = '▶'; 
     }
 });
 
-// Event listener for next button
 nextButton.addEventListener('click', () => {
-    currentTrackIndex = (currentTrackIndex + 1) % tracks.length; // Move to next track
-    playTrack(); // Play new track
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length; 
+    playTrack(); 
 });
 
-// Event listener for previous button
 prevButton.addEventListener('click', () => {
-    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length; // Move to previous track
-    playTrack(); // Play new track
+    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length; 
+    playTrack(); 
 });
 
-// Event listener for audio time update to update progress bar
 audio.addEventListener('timeupdate', updateProgress);
 
-// Event listener for progress bar change to seek track
 progressBar.addEventListener('input', () => {
-    const seekTime = (progressBar.value / 100) * audio.duration; // Calculate seek time
-    audio.currentTime = seekTime; // Update current time of audio
+    const seekTime = (progressBar.value / 100) * audio.duration; 
+    audio.currentTime = seekTime; 
 });
 
-// Event listener for mouse click on the progress bar to update playback time
 progressBar.addEventListener('click', (event) => {
-    const rect = progressBar.getBoundingClientRect(); // Get the bounding rectangle of the progress bar
-    const offsetX = event.clientX - rect.left; // Get the click position relative to the bar
-    const progressWidth = rect.width; // Get the width of the progress bar
-    const clickPercent = offsetX / progressWidth; // Calculate the percentage clicked
-    const newTime = clickPercent * audio.duration; // Calculate the new time
-    audio.currentTime = newTime; // Update the current time of audio
+    const rect = progressBar.getBoundingClientRect(); 
+    const offsetX = event.clientX - rect.left; 
+    const progressWidth = rect.width; 
+    const clickPercent = offsetX / progressWidth; 
+    const newTime = clickPercent * audio.duration; 
+    audio.currentTime = newTime; 
 });
 
-// Function to toggle menu
 function toggleMenu() {
     const sideMenu = document.getElementById('sideMenu');
     sideMenu.classList.toggle('active');
 }
 
-// Display current year and last modified date
 const yearSpan = document.getElementById("currentyear");
 const lastModifiedSpan = document.getElementById("lastModified");
 
 yearSpan.textContent = new Date().getFullYear();
 lastModifiedSpan.textContent = document.lastModified;
 
-// Automatically play the first track on page load
 window.onload = () => {
-    playTrack(); // Play the first track when the page loads
+    playTrack();
 };

@@ -10,10 +10,10 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('images/3.png'); /* Path to your local image */
-    background-size: cover; /* Makes the image cover the entire page */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-image: url('images/3.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     font-family: Arial, sans-serif;
     overflow: auto;
 }
@@ -23,39 +23,38 @@ body {
     flex-wrap: wrap; 
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+    background: rgba(0, 0, 0, 0.7); 
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+    backdrop-filter: blur(10px); 
 }
 
-/* Container for logo */
+
 .logo-container {
     top: 0;
     background: linear-gradient(-45deg, #e81cffdc 0%, #40c9ffd2 100%);
     border-radius: 15px;
     padding: 10px;
-    margin: 10px auto; /* Center the container and set a top margin */
-    width: fit-content; /* Width fits the content */
-    text-align: center; /* Center text within the container */
-    position: relative; /* Ensure it follows normal document flow */
+    margin: 10px auto; 
+    width: fit-content; 
+    text-align: center; 
+    position: relative;
 }
 
-/* Logo title styling */
+
 .logo-title {
     font-family: 'Arial', sans-serif;
-    font-size: 2em; /* Main title font size */
+    font-size: 2em; 
     color: #000000a8;
     margin: 0;
     line-height: 1;
 }
 
-/* Subtitle styling */
 .logo-subtitle {
     font-family: 'Arial', sans-serif;
-    font-size: 0.8em; /* Subtitle font size */
+    font-size: 0.8em; 
     color: #000000a8;
     margin: 0;
     line-height: 1.5;
@@ -64,7 +63,7 @@ body {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;        /* Centers all items within the nav */
+    justify-content: center;
     gap: 30px; 
     padding: 0;
     margin: 0;
@@ -72,23 +71,23 @@ nav ul {
 
 nav ul li {
     text-align: center;
-    padding-right: 10px;              /* Centers each item within its flex area */
+    padding-right: 10px; 
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px;
-    transition: color 0.3s, border-bottom 0.3s; /* Smooth transition */
+    transition: color 0.3s, border-bottom 0.3s; 
 }
 
 nav ul li a:hover {
-    color: #FC9E82;                  /* Coral color on hover */
-    border-bottom: 2px solid #FC9E82; /* Adds a bottom border on hover */
+    color: #FC9E82;                  
+    border-bottom: 2px solid #FC9E82; 
 }
 
 .menu-toggle {
-    display: none; /* Hide on desktop */
+    display: none; 
     font-size: 24px;
     color: white;
     cursor: pointer;
@@ -97,7 +96,7 @@ nav ul li a:hover {
 .side-menu {
     position: fixed;
     top: 0;
-    right: -250px; /* Start hidden off-screen */
+    right: -250px; 
     width: 250px;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
@@ -107,7 +106,7 @@ nav ul li a:hover {
 }
 
 .side-menu.active {
-    right: 0; /* Slide in */
+    right: 0; 
 }
 
 .side-menu ul {
@@ -130,17 +129,16 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     body {
-        height: auto; /* Allow height to adjust */
+        height: auto; 
     }
     .nav {
-        display: none; /* Hide navigation links on small screens */
+        display: none; 
     }
 
     .menu-toggle {
-        display: block; /* Show menu toggle button on mobile */
+        display: block; 
         padding-top: 10px;
         padding-left: 10px;
     }
@@ -151,50 +149,49 @@ nav ul li a:hover {
         font-size: 1em;
     }
     .header {
-        position: relative; /* Make header a positioned ancestor */
-        z-index: 1; /* Ensure header stays on top */
+        position: relative; 
+        z-index: 1; 
     }
 
     .logo-container {
-        position: absolute; /* Position it relative to the header */
-        left: 0; /* Align it to the left */
-        transform: translateX(15%); /* Adjust to center the element */
-        width: 80%; /* Full width */
-        text-align: center; /* Center text */
-        background-color: rgba(255, 255, 255, 0.301); /* Optional: to ensure the logo stands out */
-        z-index: 2; /* Ensure it stays on top of the header */
-        padding: 15px 0; /* Add some padding for better spacing */
+        position: absolute; 
+        left: 0; 
+        transform: translateX(15%); 
+        width: 80%; 
+        text-align: center; 
+        background-color: rgba(255, 255, 255, 0.301); 
+        z-index: 2; 
+        padding: 15px 0; 
     }
 
-    /* Adjust header padding to accommodate logo */
     .header {
-        padding-bottom: 110px; /* Make space for the logo */
+        padding-bottom: 110px; 
     }
 }
 
 .footer {
-    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
-    background: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
-    padding: 10px 20px; /* Top and bottom padding */
+    backdrop-filter: blur(10px); 
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 10px 20px; 
     text-align: center;
-    width: 100%; /* Ensure full width */
-    position: fixed; /* Ensure it doesn't affect other elements */
-    left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
+    width: 100%; 
+    position: fixed; 
+    left: 0; 
+    right: 0; 
     bottom: 0;
-    opacity: 0; /* Start as invisible */
-    transition: opacity 0.5s; /* Smooth transition for opacity */
-    margin-top: 10px; /* Add top margin for spacing */
+    opacity: 0;
+    transition: opacity 0.5s; 
+    margin-top: 10px; 
 }
 
 footer:hover .footer {
-    opacity: 1; /* Make it visible on hover */
+    opacity: 1; 
 }
 
 .footer .row {
     width: 100%;
-    margin: 1% 0; /* Keep the margin to space the rows */
-    padding: 0.2% 0; /* Reduced padding for rows */
+    margin: 1% 0; 
+    padding: 0.2% 0; 
     color: gray;
     font-size: 0.8em;
 }
@@ -206,29 +203,28 @@ footer:hover .footer {
 }
 
 .footer .row a:hover {
-    color: #fff; /* Change color on hover */
+    color: #fff; 
 }
 
 .footer .social-links {
-    display: flex; /* Use flexbox for social links */
-    justify-content: center; /* Center the icons */
-    margin-bottom: 10px; /* Space below social links */
+    display: flex; 
+    justify-content: center;
+    margin-bottom: 10px; 
 }
 
 .footer .social-links a {
-    margin: 0 15px; /* Space between icons */
+    margin: 0 15px; 
 }
 
 .footer .row a i {
-    font-size: 1.5em; /* Set icon size */
-    margin: 0; /* No extra margin for icons */
+    font-size: 1.5em; 
+    margin: 0; 
 }
 
-/* Ensure the footer's parent elements do not restrict its width */
 footer {
-    width: 100%; /* Ensure footer spans the full width */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
 }
 
 
@@ -242,7 +238,6 @@ footer {
     padding: 40px;
 }
 
-/* Store item styling */
 .store-item {
     background-color: #44807b65;
     border-radius: 8px;
@@ -254,7 +249,7 @@ footer {
 
 .store-item a {
     
-    text-decoration: none; /* Removes underline from links */
+    text-decoration: none; 
 }
 
 .store-item:hover {
@@ -269,7 +264,6 @@ footer {
     border-radius: 8px 8px 0 0;
 }
 
-/* Item info */
 .item-info {
     padding: 15px;
     text-align: center;

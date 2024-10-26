@@ -131,7 +131,7 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .body{
-        transform: scale(0.75); /* Scale down to 75% */
+        transform: scale(0.75); 
     }
     .nav {
         display: none; 
@@ -330,7 +330,7 @@ footer {
 
 @media (max-width: 768px) {
 body{
-    background-repeat: repeat; /* Repeat the background image */
+    background-repeat: repeat; 
         background-size: cover;
 }
 
