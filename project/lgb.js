@@ -1,4 +1,3 @@
-// Track data
 const tracks = [
     {
         title: "Lonely Lane",

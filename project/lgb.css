@@ -5,13 +5,6 @@
     
 }
 
-.lazy-background {
-    background-color: #f0f0f0; /* Optional: A placeholder color */
-    min-height: 300px; /* Set a height for the element */
-    background-size: cover; /* Optional: Cover the area */
-    background-position: center; /* Optional: Center the background */
-}
-
 body {
     display: flex;
     flex-direction: column;
